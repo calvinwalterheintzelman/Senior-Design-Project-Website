@@ -1,0 +1,439 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PCM3002:PCM3002 U6
+U 1 1 5E6794DE
+P 3450 2600
+F 0 "U6" H 3650 2815 50  0000 C CNN
+F 1 "PCM3002" H 3650 2724 50  0000 C CNN
+F 2 "digikey-footprints:LSSOP-24_W5.6mm" H 3450 3000 50  0001 C CNN
+F 3 "" H 3450 3000 50  0001 C CNN
+	1    3450 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 4900 2100 4900
+Text GLabel 5150 1700 2    50   Input ~ 0
+Analog-Vcc
+Wire Wire Line
+	5150 1700 4750 1700
+Wire Wire Line
+	2650 3000 2500 3000
+Wire Wire Line
+	2500 3000 2500 2850
+Connection ~ 2500 2850
+Wire Wire Line
+	2500 2850 2650 2850
+Wire Wire Line
+	4750 1700 4750 1850
+Wire Wire Line
+	4750 1850 2500 1850
+Wire Wire Line
+	2500 1850 2500 2850
+Connection ~ 4750 1850
+Wire Wire Line
+	4750 1850 4750 2250
+$Comp
+L Device:CP1 C19
+U 1 1 5E67E35F
+P 2000 2850
+F 0 "C19" V 1748 2850 50  0000 C CNN
+F 1 "10uF tantalum" V 1839 2850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2000 2850 50  0001 C CNN
+F 3 "~" H 2000 2850 50  0001 C CNN
+	1    2000 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2150 2850 2250 2850
+$Comp
+L power:GNDA #PWR0108
+U 1 1 5E67E8D3
+P 1600 2850
+F 0 "#PWR0108" H 1600 2600 50  0001 C CNN
+F 1 "GNDA" H 1605 2677 50  0000 C CNN
+F 2 "" H 1600 2850 50  0001 C CNN
+F 3 "" H 1600 2850 50  0001 C CNN
+	1    1600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2850 1800 2850
+$Comp
+L Device:CP1 C18
+U 1 1 5E67F692
+P 2000 2350
+F 0 "C18" V 1748 2350 50  0000 C CNN
+F 1 "0.1uF Ceramic" V 1839 2350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2000 2350 50  0001 C CNN
+F 3 "~" H 2000 2350 50  0001 C CNN
+	1    2000 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 2350 1800 2350
+Wire Wire Line
+	1800 2350 1800 2850
+Connection ~ 1800 2850
+Wire Wire Line
+	1800 2850 1850 2850
+Wire Wire Line
+	2150 2350 2250 2350
+Wire Wire Line
+	2250 2350 2250 2850
+Connection ~ 2250 2850
+Wire Wire Line
+	2250 2850 2500 2850
+$Comp
+L power:GNDA #PWR0109
+U 1 1 5E68051B
+P 5550 3350
+F 0 "#PWR0109" H 5550 3100 50  0001 C CNN
+F 1 "GNDA" H 5555 3177 50  0000 C CNN
+F 2 "" H 5550 3350 50  0001 C CNN
+F 3 "" H 5550 3350 50  0001 C CNN
+	1    5550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C23
+U 1 1 5E68141F
+P 5150 3350
+F 0 "C23" V 5402 3350 50  0000 C CNN
+F 1 "4.7uF" V 5311 3350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5150 3350 50  0001 C CNN
+F 3 "~" H 5150 3350 50  0001 C CNN
+	1    5150 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 3200 4800 3200
+Wire Wire Line
+	5300 3350 5550 3350
+$Comp
+L Device:CP1 C25
+U 1 1 5E6820B9
+P 5200 2650
+F 0 "C25" V 4948 2650 50  0000 C CNN
+F 1 "10uF tantalum" V 5039 2650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5200 2650 50  0001 C CNN
+F 3 "~" H 5200 2650 50  0001 C CNN
+	1    5200 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1 C24
+U 1 1 5E682BCC
+P 5200 2350
+F 0 "C24" V 4948 2350 50  0000 C CNN
+F 1 "0.1uF Ceramic" V 5039 2350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5200 2350 50  0001 C CNN
+F 3 "~" H 5200 2350 50  0001 C CNN
+	1    5200 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 2350 4850 2350
+Wire Wire Line
+	4850 2650 5050 2650
+Wire Wire Line
+	5350 2650 5600 2650
+Wire Wire Line
+	5600 2650 5600 2350
+Wire Wire Line
+	5600 2350 5350 2350
+Wire Wire Line
+	4850 2750 4650 2750
+Connection ~ 4850 2650
+Wire Wire Line
+	4850 2650 4850 2750
+Wire Wire Line
+	5000 3350 4800 3350
+Wire Wire Line
+	4800 3350 4800 3200
+Wire Wire Line
+	4650 3050 5550 3050
+Connection ~ 5550 3350
+Wire Wire Line
+	4650 2900 5550 2900
+Wire Wire Line
+	5550 2900 5550 3050
+Connection ~ 5550 3050
+Wire Wire Line
+	5550 3050 5550 3350
+Wire Wire Line
+	5600 2650 5600 2900
+Wire Wire Line
+	5600 2900 5550 2900
+Connection ~ 5600 2650
+Connection ~ 5550 2900
+Wire Wire Line
+	4750 2250 4850 2250
+Wire Wire Line
+	4850 2250 4850 2350
+Connection ~ 4850 2350
+Wire Wire Line
+	4850 2350 4850 2650
+$Comp
+L Device:CP1 C22
+U 1 1 5E68ECDF
+P 5000 5100
+F 0 "C22" V 4748 5100 50  0000 C CNN
+F 1 "10uF tantalum" V 4839 5100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5000 5100 50  0001 C CNN
+F 3 "~" H 5000 5100 50  0001 C CNN
+	1    5000 5100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4950 5000 4850
+$Comp
+L power:GNDA #PWR0110
+U 1 1 5E68ECE6
+P 5000 5500
+F 0 "#PWR0110" H 5000 5250 50  0001 C CNN
+F 1 "GNDA" H 5005 5327 50  0000 C CNN
+F 2 "" H 5000 5500 50  0001 C CNN
+F 3 "" H 5000 5500 50  0001 C CNN
+	1    5000 5500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 5500 5000 5300
+$Comp
+L Device:CP1 C26
+U 1 1 5E68ECED
+P 5500 5100
+F 0 "C26" V 5248 5100 50  0000 C CNN
+F 1 "0.1uF Ceramic" V 5339 5100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5500 5100 50  0001 C CNN
+F 3 "~" H 5500 5100 50  0001 C CNN
+	1    5500 5100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5250 5500 5300
+Wire Wire Line
+	5500 5300 5000 5300
+Connection ~ 5000 5300
+Wire Wire Line
+	5000 5300 5000 5250
+Wire Wire Line
+	5500 4950 5500 4850
+Wire Wire Line
+	5500 4850 5000 4850
+Connection ~ 5000 4850
+Wire Wire Line
+	5000 4850 4650 4850
+Wire Wire Line
+	4650 4850 4650 4900
+Wire Wire Line
+	5000 5300 4650 5300
+Wire Wire Line
+	4650 5300 4650 5100
+Wire Wire Line
+	5500 4850 6100 4850
+Wire Wire Line
+	6100 4850 6100 1850
+Wire Wire Line
+	6100 1850 4750 1850
+Connection ~ 5500 4850
+$Comp
+L Device:CP1 C20
+U 1 1 5E693AD3
+P 2150 3050
+F 0 "C20" V 2402 3050 50  0000 C CNN
+F 1 "4.7uF" V 2311 3050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2150 3050 50  0001 C CNN
+F 3 "~" H 2150 3050 50  0001 C CNN
+	1    2150 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C21
+U 1 1 5E694D18
+P 2150 3450
+F 0 "C21" V 2402 3450 50  0000 C CNN
+F 1 "4.7uF" V 2311 3450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2150 3450 50  0001 C CNN
+F 3 "~" H 2150 3450 50  0001 C CNN
+	1    2150 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 3050 2650 3050
+Wire Wire Line
+	2650 3050 2650 3150
+Wire Wire Line
+	2650 3300 2650 3450
+Wire Wire Line
+	2650 3450 2300 3450
+Wire Wire Line
+	2000 3050 1900 3050
+Wire Wire Line
+	1900 3050 1900 3400
+Wire Wire Line
+	1900 3450 2000 3450
+$Comp
+L power:GNDA #PWR0111
+U 1 1 5E69DD51
+P 1650 3400
+F 0 "#PWR0111" H 1650 3150 50  0001 C CNN
+F 1 "GNDA" H 1655 3227 50  0000 C CNN
+F 2 "" H 1650 3400 50  0001 C CNN
+F 3 "" H 1650 3400 50  0001 C CNN
+	1    1650 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3400 1900 3400
+Connection ~ 1900 3400
+Wire Wire Line
+	1900 3400 1900 3450
+Wire Wire Line
+	1300 1850 2500 1850
+Connection ~ 2500 1850
+Wire Wire Line
+	1300 4100 2650 4100
+Wire Wire Line
+	1300 1850 1300 4100
+Text HLabel 2100 4450 0    50   Input ~ 0
+SYSCLK
+Text HLabel 2100 4600 0    50   Input ~ 0
+LRCIN
+Text HLabel 2100 4750 0    50   Input ~ 0
+BCKIN
+Text HLabel 2100 4900 0    50   Input ~ 0
+DOUT
+Text HLabel 2050 5050 0    50   Input ~ 0
+DIN
+Wire Wire Line
+	2100 4450 2650 4450
+Wire Wire Line
+	2650 4600 2100 4600
+Wire Wire Line
+	2650 4750 2100 4750
+Wire Wire Line
+	2650 5050 2050 5050
+Text HLabel 5450 4250 2    50   Input ~ 0
+Data_in
+Text HLabel 5450 3950 2    50   Input ~ 0
+Data_clock
+Text HLabel 5450 4100 2    50   Input ~ 0
+Data_select
+Wire Wire Line
+	5450 3950 4650 3950
+Wire Wire Line
+	4650 4100 5450 4100
+Wire Wire Line
+	5450 4250 4650 4250
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5E6D574D
+P 800 3650
+F 0 "J2" H 908 3831 50  0000 C CNN
+F 1 " " H 908 3740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 800 3650 50  0001 C CNN
+F 3 "~" H 800 3650 50  0001 C CNN
+	1    800  3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5E6D71BD
+P 6750 3700
+F 0 "J5" H 6722 3582 50  0000 R CNN
+F 1 " " H 6722 3673 50  0000 R CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 6750 3700 50  0001 C CNN
+F 3 "~" H 6750 3700 50  0001 C CNN
+	1    6750 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1700 3650 1700 3800
+Wire Wire Line
+	2350 3800 2350 3700
+Wire Wire Line
+	2350 3700 2650 3700
+Wire Wire Line
+	1000 3650 1700 3650
+$Comp
+L power:GNDA #PWR020
+U 1 1 5E6E0C41
+P 1150 3750
+F 0 "#PWR020" H 1150 3500 50  0001 C CNN
+F 1 "GNDA" H 1155 3577 50  0000 C CNN
+F 2 "" H 1150 3750 50  0001 C CNN
+F 3 "" H 1150 3750 50  0001 C CNN
+	1    1150 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 3750 1000 3750
+$Comp
+L power:GNDA #PWR021
+U 1 1 5E6E4D36
+P 6350 3450
+F 0 "#PWR021" H 6350 3200 50  0001 C CNN
+F 1 "GNDA" H 6355 3277 50  0000 C CNN
+F 2 "" H 6350 3450 50  0001 C CNN
+F 3 "" H 6350 3450 50  0001 C CNN
+	1    6350 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3450 6550 3450
+Wire Wire Line
+	6550 3450 6550 3600
+Text Notes 6850 3750 0    50   ~ 0
+Audio Out (mono)
+Text Notes 6850 3600 0    50   ~ 0
+GND
+Text Notes 2300 4400 2    50   ~ 0
+Audio In (mono)
+Text Notes 650  3800 0    50   ~ 0
+GND
+$Comp
+L Device:CP1 C28
+U 1 1 5E6F2B37
+P 5450 3700
+F 0 "C28" V 5702 3700 50  0000 C CNN
+F 1 "4.7uF" V 5611 3700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5450 3700 50  0001 C CNN
+F 3 "~" H 5450 3700 50  0001 C CNN
+	1    5450 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 3700 5300 3700
+Wire Wire Line
+	6550 3700 5600 3700
+$Comp
+L Device:CP1 C27
+U 1 1 5E6FF6AC
+P 2100 3800
+F 0 "C27" V 1848 3800 50  0000 C CNN
+F 1 "1uF" V 1939 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2100 3800 50  0001 C CNN
+F 3 "~" H 2100 3800 50  0001 C CNN
+	1    2100 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 3800 1700 3800
+Wire Wire Line
+	2250 3800 2350 3800
+$EndSCHEMATC

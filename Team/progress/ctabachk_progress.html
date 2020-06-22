@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<base href="https://engineering.purdue.edu/477grp8/" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="bred<" />
+	<meta name="keywords" content="bred<" />
+	<meta name="description" content="bred<" />
+	<meta name="robots" content="all" />
+	<title>AudioBeamer Team : Carson Tabachka</title>
+
+	<style type="text/css" title="currentStyle" media="screen">
+		@import "./css/global.css";
+	</style>
+    
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="top">
+    	<h1 class="logo">AudioBeamer</h1>
+        <ul id="topnavi">
+        	<li><a href="https://engineering.purdue.edu/477grp8/">HOME</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Files/documents.html">DOCUMENTS</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Files/references.html">REFERENCES</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Media/media.html">MEDIA</a></li>
+        	<li class="active"><a href="https://engineering.purdue.edu/477grp8/Team/team.html">TEAM</a></li>
+        </ul>
+    </div>
+    <div id="header">
+    	<img src="img/header.jpg" alt="" width="1000" height="183" />
+    </div>
+    <div id="main">
+    	<div id="left-part">
+        	<h1>Team Members</h1>
+            <ul id="subnavi">
+                <li class="active"><a href="https://engineering.purdue.edu/477grp8/Team/ctabachk.html">Carson Tabachka</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/abiala.html">Aditya Biala</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/athagart.html">Aditya Thagarthi Arun</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/cheintze.html">Calvin Walter Heintzelman</a></li>
+            </ul>
+
+        </div>
+    	<div id="right-part">
+        	<h1>Progres Report for Carson Tabachka</h1>
+            <p><img src="img/ctabachk_week2.jpg" alt="" width="440" class="right" />
+            <h2>Week 2:</h2>Date: 1/24/2020</p>
+            <p>Total hours: 10</p>
+            <h4>Description of design efforts:</h4>
+            <p>I spent the beginning of the week organizing the team, delegating instructions and working with my teammates to revise our project.  Based on the feedback from the class instructional staff, we decided to revise our project to have less of a focus on the transmission between the guitar and the receiver device and a larger focus on digital signal processing of the audio signal.<br><br>With this in mind, I spent much of my time researching and developing my understanding of digital signal processing.  The goal was to best understand what would be required of the microcontroller for this aspect of the project.  As I understand it now, digital signal processing will first require FFT.  Once the signal has been transformed, functions and convolutions may be applied to manipulate the signal as desired.  Finally, the signal is inverted using IFFT and can be sent back to the audio codec.<br><br>With the theoretical concepts behind the project understood, I began research on microcontrollers which might be applicable to the project.  One that seems interesting at this point are the MSP430 family.  This microcontroller operates at with relatively low power requirements and has a C/C++ library for DSP available to it.  Another option is the ARM series, especially the cortexM3, which has a DSP library available to it as well.  This microcontroller does not appear to have the low power requirements that the MSP430 has, but it does allow for floating point DSP manipulations, which has been recommended to us as a better option than fixed point.<br><br>Finally, after sorting through these libraries and building a better understanding of both the theory behind the project and the computational requirements of the project, I worked to build a complete picture of our project on the weekly homework and revised and built upon my team's work.</p>
+<p><img src="img/ctabachk_week3.jpg" alt="" width="440" class="right" />
+            <h2>Week 3:</h2>Date: 1/31/2020</p>
+            <p>Total hours: 10</p>
+            <h4>Description of design efforts:</h4>
+            <p>The week began with the pressing choice of which microcontroller to choose.  In the previous week we had determined that both TI and ARM microcontrollers have DSP libraries available.  After talking to course staff about some of the ARM microcontrollers which are capacble of using the DSP library, we determined that those microcontrollers would be too power hungry to operate off a battery.  After eliminating ARM, the focus shifting to TI.  We analyzed each generation of the MSP430 to determine which would be best for our project.  The conclusion was the MSP430FR5994.  This was chosen because it is low power, has a dedicated DSP processor and has a DSP library available to it.  Performance benchmarks on the seperate DSP processor convinced us that it would be necessary to minimize lag time between the input and output of the signal.  The only significant attribute lacking in this device that our project would need is bluetooth capability.  In order to obtain bluetooth capability, another device will be chosen which can interface with the MSP430FR5994 via UART.  Another capability this deivce is lacking is I2S.  With a bit of research, documentation was found which detailed how to interface the MSP430FR5994 with a TLV320AIC26 Audio Codec.  This document details using a 5-bit counter in conjunction with SPI to effectively create I2S.  This is likely what will be used to interface the audio codec with the MSP430.<br><br>It was also decided from conversations with the course staff that the best way to measure battery charge would be a Power Management Integrated Circuit.  Because batteries have a non-linear discharge function, this will be the best way to determine battery life.<br><br>After these important design decisions and developments, I worked on the Software Overview.  We worked to explain the software's responsibilties and how the run time of the software will proceed.  Once a firm grasp of the software had been established and a consensus was reached on this understanding, both program flowcharts and state machines were designed.  While there were some disagreements on how to present the programs, the consensus was appealing.  Next, the interfacing algorithms were described (UART for Bluetooth, I2S for audio codec, etc).  Finally, further research was done on the data structures of the DSP library.  These structures are the format which will be required to use the DSP library funcitons.</p>
+<p><img src="img/ctabachk_week4.jpg" alt="" width="440" class="right" />
+            <h2>Week 4:</h2>Date: 2/7/2020</p>
+            <p>Total hours: 10</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week began by obtaining our development board and beginning to build an understanding of programming for the MSP430FR5994.  We installed Code Composer Studio on each of our laptops.  We also installed the MSP430 library and Digital Signal Processing library.  Once this set up was complete, we worked to understand the libraries to get an LED on the development board to blink.  This was accomplished by enabling a timer in up mode with the system clock.  This would trigger an interrupt which would toggle a GPIO pin connected to the LED.<br><br>After this development environment set up was complete, we began finializing part selections and ordering parts.  We finalized selection for a codec, battery monitor, voltage regulator, battery charger, and Bluetooth module.  The Bluetooth module selected was the RN4020 which was not in consideration before this week.  This device was much better than those being considered as it will communicate Bluetooth to the MCU via UART.<br><br>Finally, to begin development for the Android application, Android Studio was installed, as well as example communications from the RN4020 with an Android device.  These examples, will help to start building an understanding of how to communicate with the RN4020, which I hope to test by next week.</p>
+<p><img src="img/ctabachk_week5.jpg" alt="" width="440" class="right" />
+            <h2>Week 5:</h2>Date: 2/14/2020</p>
+            <p>Total hours: 11</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week began by finalizing the voltage regulator. This linear regulator will be capable of holding 3.3V output and sourcing up to 300mA. In addition to this, our PCB is beginning to be designed in KiCAD. The design is taking shape around the previously mentioned voltage regulator and a chargin capability for the device's battery.<br><br>In addition to this, more research was done on possible DSP effects. One of intererst might be adding an echo effect.  This effect would be accomplished by adding a delayed copy of the input signal to the input. Such an equation would be y(n) = x(n) + gain x(n - delay/frequency) or the trasfer function H(z) = 1 + gain z ^ (-delay/frequency). Another interesting effect would be wah-wah. This function would be adding the input signal to a time varying bandpass filter: y(n) = BP(x(n), time).<br><br>Finally, as the weekend approaches, we have begun to implement the UART connection between the MCU and RN4020 as well as the Bluetooth connection between the Android and the RN4020.<br><br>Information on DSP functions: "Digital Audio Effects" [Online]. Available: https://users.cs.cf.ac.uk/Dave.Marshall/CM0268/PDF/10_CM0268_Audio_FX.pdf [Accessed February 14, 2020].</p><br><img src="img/ctabachk_week6.jpg" alt="" width="225" class="right" style="transform:rotate(90deg)"/><br><br>
+<p>
+            <h2>Week 6:</h2>Date: 2/21/2020</p>
+            <p>Total hours: 18</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week my main focus was to work with Calvin to establish a Bluetooth low energy connection between an Android app and the RN4020.  First, I researched what specifically this would entail.  In a Bluetooth low energy connection, one device is a peripheral, meaning it sends advertisements, and the other device is a central device, meaning it scans for advertisements.  The best path forward would seem to be using the Android device as the central device and the RN4020 as the peripheral device.  The RN4020 was configured by default to advertise itself, so the app was designed to scan for advertisements.  When an advertisement is found from a device with the correct name, the Android app connects to and bonds with that device.  When a peripheral device is bonding, it will no longer send advertisement packets to devices other than the one to which it is bound.  At first, the RN4020 had a six digit pin for the phone to input for security.  This pin would not be readable on the final product as it has no screen, so I disabled the pin on the RN4020. This can lead to other devices bonding with the RN4020 so a reset will unbind the RN4020.  In a final version of this product, the pin could be read audibly through the analog output of the system.  With the devices connected, the next step is creating a GATT server.  A GATT server hosts a service which contains "characteristics", which in our case will be different values for DSP configuration.  The Android app will be operating as the server, while the RN4020 will be acting as a client.  When the user of the Android app moves a slider, the characteristic that identifies the value of that slider will change and the change will be sent to the client.  My first picture is the terminal of the RN4020 showing the update messages it received from the Android app.  The second picture shows the code for connecting, bonding, and creating the GATT server.<img src="img/ctabachk_week6_0.jpg" alt="" width="440" class="right" /></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p><img src="img/ctabachk_week7.jpg" alt="" width="440" class="right" />
+            <h2>Week 7:</h2>Date: 2/28/2020</p>
+            <p>Total hours: 10</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week began by working to integrate the UART set up code Aditya Biala wrote last week with the Android app. First we added code to the firmware to send '+', 'R,1', 'K', and 'U' to the RN4020 when the device starts up. This will turn on echo, restart the RN4020, disconnect it, and unbind it. We confirmed that the BluetoothLE message was being sent over UART to the MSP430 with an oscilloscope.<br><br> At this point, I began to implement a means for parsing this message.  An array of unsigned char is used to hold the messages recieved over UART. In a UART interrupt, this is filled character by character.  This interrupt inserts the current character to the buffer, increments the index of the buffer, and sets an update boolean to true. The buffer to which the message is saved is circular, meaning the index was updated with a modulus to keep it within bounds, but it was realized that modulus is an intensive operation for the MSP430.  Because of the modulus operation, the buffer would only save every other character of the BluetoothLE message.  This was fixed by replacing the modulus operation with a condition to check for the index going out of bounds and an assignment of the index back into bounds.  This method is used to replace modulus of this index throughout the firmware. Once it was confirmed that the message was correctly being saved to the buffer, I began parsing the message.  First the function to update the slider values searches for the character 'N' in the buffer because it is the first value in the update message.  Once this is found, the two characters corresponding to the characteristic's identifier are extracted.  Then, the two characters corresponding to the hex value of the slider are extracted and converted to an int ranging from 0 to 100.  This int value is saved to a global variable corresponding to the desired slider.  Each of these varibles will be used in the DSP functions to determine operation.</p>
+<p><img src="img/ctabachk_week8.jpg" alt="" width="440" class="right" />
+            <h2>Week 8:</h2>Date: 3/6/2020</p>
+            <p>Total hours: 10</p>
+            <h4>Description of design efforts:</h4>
+            <p>I began the week by taking a look again at the casing for our device. With the PCB almost finalized, this casing had to be slightly altered to account for placement of both input and output analog jacks as well as the bluetooth antenna.<br><br>After this, we had our midterm review and through this process some decisions were made.  Namely, we would like to have batter information read from the PMIC transmitted to the Android device over the same Bluetooth Low Energy connection.  This would involve creating a service from the microcontroller and having the android app act as a client for this server.<br><br>A current bottleneck we are reaching is the operation of the audio codec device. This deivce requires three clock inputs to function: a system clock, a Left/Right clock of 48kHz (corresponding to when each 16-bit sample should be taken), and bit-sample clock.  While the circuit appears to be correctly constructed according to the datasheet and using correct, albeit noisy, signals, the I2S line will output a bit signal regardless of what it sent to the input. Further testing here is where we will focus going into this weekend and early next week.<br><br>Finally, in preperation for implementing high, mid, and low frequency DSP filters, I did more research on how this will be implemented. These filters are implemented by finite impulse response filter, represented by the MSP DSP library function 'msp_fir_q15(const msp_fir_q15_params *params, const _q15 *src, _q15 *dst)' where params will be the coefficients corresponding to the current filter, and src and dst are the input and output signals.  The coefficients of params will be changed according to both frequency of the filter, and magnitude of the desired volume.</p>
+<p><img src="img/ctabachk_week11.jpg" alt="" width="440" class="right" />
+            <h2>Week 11:</h2>Date: 3/28/2020</p>
+            <p>Total hours: 8</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week focused on adjusting both the design and design process to accommodate the current quarantine.  Parts were ordered in both through hole and surface mount form, so the final build can be attempted on a printed circuit board and a bread board.  In addition to this, I ordered a development board for the MSP430 which I have recently acquired.  Finally, to accommodate the quarantine, we have set up a discord channel which can be used for communication during active development time.  This will allow both real time text chat as well as voice chat.  Early on in the semester, we set up a GitHub for this project and relevant code is being shared there.<br><br>In addition to these adjustments to the operations of the project, I have made some process in starting the ADC on the MSP430.  As I do not have access to the audio codec yet, the ADC should provide a sample input data for the digital signal processing to operate on.</p>
+<p><img src="img/ctabachk_week13.jpg" alt="" width="440" class="right" />
+            <h2>Week 13:</h2>Date: 4/10/2020</p>
+            <p>Total hours: 9</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week, I received wires which I had been waiting for reading audio inputs to the microcontroller.  Because I do not have physical access to the audio codec which will be sending the digital audio data to the microcontroller in the final product, I have decided to use the ADC for DSP testing purposes.  The goal is to use the ADC input as example data which can be processed by the microcontroller in the same way that the audio codec's data will be. The ADC was configured to sample a single channel, pin A1.2, continuously.  The data is read and placed into an array buffer.  In debug mode, I am able to inspect and plot this array to see that the data is being read correctly.  While I have no function generator, the test inputs from YouTube videos of waveforms seem to be correctly read.  From here, I will use the data from the ADC to implement the equalization.</p>
+<p><img src="img/ctabachk_week14.jpg" alt="" width="440" class="right" />
+            <h2>Week 14:</h2>Date: 4/17/2020</p>
+            <p>Total hours: 13</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week I began work on the digital signal processing.  I have begun to set up the method of equalization which most makes sense to me.  When a section of data is loaded from the DAC, in this case somewhere between 100 and 256 ints, (this is arbitrary and subject to change) the array is processed with three seperate filters, creating three new arrays of low, middle, and high frquencies.  From current testing, the high and low filters seem to be working well, but the mid filter is failing to pick up a signal. This will be adjusted in the coming days.  Once these arrays are created, they will each be multiplied by the value corresponding to its silder in the Android App and summed to a final, equalized array.  After this, the equalized array will be passed onto distortion and reverb.</p>
+<p><img src="img/ctabachk_week15.jpg" alt="" width="440" class="right" />
+            <h2>Week 15:</h2>Date: 4/17/2020</p>
+            <p>Total hours: 18</p>
+            <h4>Description of design efforts:</h4>
+            <p>This week I continued efforts toward the digital signal processing.  It was discoverd that the filters being generated by TI's GUI filter generator contained several variables which were always set to '0' and therefore not useful.  To resolve this, new filters were generated in MATLAB, which will hopefully operate as intended.  I added scaling of each of the three frequency ranges and made that scaling controllable by the values set from the Android device.  Once these values are scaled, they are summed to an "equalization output" array.  I also incorporated the echo/reverb feature which adds a scaled copy of the previous output value to the current output value.  With further testing, this might be changed to further reduce the amplitude of the echo value being added.  In addition to this, I did further research on implementation of distortion, which appears to be a more difficult than the other features.  Distortion has several varities, including clipping of the signal (reducing amplitudes over a set cap to that cap) or adding a small amount to the value proportional to that value.  I found this method described in a project similar to our own from Stanford.  Because distortion is calculated by a function such as y=x+(x^3)/3 which would be incredibly difficult to calculate within the time required for DSP, they suggest precalculating the output of these functions before operation for each, or a large number of the input values.  These distortion values could then be found quickly without the need for costly calculations.  This feature is the last DSP feature left to implement.  Hopefully soon the audio codec will be complete and these DSP features can be fully tested.<br><br>W. Herman, DSPFuzz A Guitar Distortion Pedal Using the Stanford DSP Sheild [Online]. Available: https://web.stanford.edu/class/ee264/projects/EE264_w2015_final_project_herman.pdf [Accessed April 24, 2020].</p>
+        </div>
+    </div>
+    <div id="footer">
+        <span class="darkgrey">Design by <a href="http://www.prontomoda.de/" target="_blank" title="Handtaschen">Handtaschen</a></span></p>
+    </div>
+</div>
+<div style="margin: 1em 0 3em 0; text-align: center;">
+</div>
+</body>
+</html>

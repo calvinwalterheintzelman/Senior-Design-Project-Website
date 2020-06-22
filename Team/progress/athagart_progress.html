@@ -1,0 +1,207 @@
+<!DOCTaYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<base href="https://engineering.purdue.edu/477grp8/" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="bred<" />
+	<meta name="keywords" content="bred<" />
+	<meta name="description" content="bred<" />
+	<meta name="robots" content="all" />
+	<title>AudioBeamer Team : Aditya Thagarthi Arun</title>
+
+	<style type="text/css" title="currentStyle" media="screen">
+		@import "./css/global.css";
+	</style>
+
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="top">
+    	<h1 class="logo">AudioBeamer</h1>
+        <ul id="topnavi">
+        	<li><a href="https://engineering.purdue.edu/477grp8/">HOME</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Files/documents.html">DOCUMENTS</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Files/references.html">REFERENCES</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Media/media.html">MEDIA</a></li>
+        	<li class="active"><a href="https://engineering.purdue.edu/477grp8/Team/team.html">TEAM</a></li>
+        </ul>
+    </div>
+    <div id="header">
+    	<img src="img/header.jpg" alt="" width="1000" height="183" />
+    </div>
+    <div id="main">
+    	<div id="left-part">
+        	<h1>Team Members</h1>
+            <ul id="subnavi">
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/ctabachk.html">Carson Tabachka</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/abiala.html">Aditya Biala</a></li>
+                <li class="active"><a href="https://engineering.purdue.edu/477grp8/Team/athagart.html">Aditya Thagarthi Arun</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/cheintze.html">Calvin Walter Heintzelman</a></li>
+            </ul>
+
+        </div>
+    	<div id="right-part">
+            <h1>Progress Report for Aditya Thagarthi Arun</h1>
+            
+	    <h2>Week 2:</h2>Date: 1/24/2020</p>
+	    <p>Total Hours: 10</p>
+	    <h3>Description of design efforts:</h3>
+	    <p> <img src="img/athagart/athagart2.jpg" alt="" width="250" height="150" class="right" />
+		Worked on setting up my section of the websites. Looked up some microcontrolles that might be suitable for our use case. 
+		<br>
+		The team as a whole decided to not work on the radio communitation between the transmitter and the reciever but instead focus more on the audio 
+		processing aspect of the project (which involves DSP). Looked up some microcontrollers. 
+		Filled in some sections in homework 2. Worked on revising the project objectives and the PSSCs.</ p>	
+	    <br><br><br><br>
+
+
+	    <h2>Week 3:</h2>Date: 1/31/2020</p>
+	    <p>Total Hours: 8-10</p>
+		<h3>Description of design efforts:</h3>
+		
+		<p> <img src="img/athagart/athagart3b.png" alt="" width="250" height="250" class="right" />This week I primarily worked on understanding the basics of Bluetooth. 			It was also my responsibilty to find the right bluetooth IC/modules for our project. This will be very important as our design relies on using Bluetooth 			communication from an android phone for changing the sound settings. As we have decided to use digital signal processing for adding effects to the sound of the 		guitar it is also important to get a basic understanding of the DSP library for the MSP430 family because we have decided to use that chip for our audio 			processing. I read through the library/user guide(<a href="http://dev.ti.com/tirex/content/msp/MSP430Ware_3_60_00_10/dsplib/html/usersguide.html">User Guide</a>). <br> <br> <br> <br> <br>
+
+		<p> <img src="img/athagart/athagart3a.png" alt="" width="250" height="250" class="right"/>For the assignments this week, I worked on  filling portions of the 			software overview(section 3.0) and the Bluetooth section of the component analysis as it was related to the work I did which was finding the the right Bluetooth components. After lining up the canditdates for the Bluetooth IC we decided to use the CC2650 chip (made by Texas Instruments) as we felt it met most of our requirements (and the fact that we can use the same CCS for programming as our DSP chip). The next step for me would be to understand how to interface the Bluetooth chip to the DSP chip using UART and also to get a better understanding of digital signal processing. <br><br><br><br><br>The bluetooth components I worked on to line up as candidates for component analysis are shown in the table below:  
+		</p>
+
+		<img src="img/athagart/athagart3c.png" alt="" width="700" height="218" class="center"/>
+<br><br><br><br>
+	<h2>Week 4:</h2>Date: 2/7/2020</p>
+	    <p>Total Hours: 10</p>
+		<h3>Description of design efforts:</h3>
+		<p> This week there were some changes made to our project. Firstly, we decided to use a rechargeable lithium ion battery instead of alkaline AA batteries. We also decided to add charging functionality to our project. We spent some time to get the LED to blink and we were able to control the speed of the blink because we used timers with interrupts to blink the LEDs. We have more or less finalized all or major components for the project and we have placed our order through Digikey. </p>
+
+		<p> <img src="img/athagart/rn4020.jpg" alt="" width="250" height="225" class="right" /> This week in lab we were advised to use the RN4020 Bluetooth module instead of our previous choice of using a regular microcontroller (CC2650). We realized that the use of this module would be simpler than the use of a regular microcontroller that had bluetooth functionality. I spent time to familiarize myself with the documentation(<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/50002279B.pdf">Data Sheet</a>) for this module because it looks promising. I read the smartphone developer guide documentation provided by the manufacturer of this chip (<a href="https://microchipdeveloper.com/ble:rn4020-app-example-smartphone-basic-demo">Developer Documentation</a>). I pursued this because I will most probably take up the bluetooth part of this project and understanding this will be helpful. This chip has Bluetooth 4.1 so it has support for BLE (we will most probably use BLE). I learned that BLE uses the same 2.4 GHz radio waves but uses a simpler/different modulation technique. BLE is useful in low power applications and because we are using a battery to power our project power for us will be finite. We will still be using UART to interface between the Bluetooth and the MCU because the module has good UART support. I also came up with the idea that we could display the battery level on the android application rater than having a dedicated lcd to diplay the battery level. I believe that this should be possible and a more elegant solution. The RN4020 has a command API which enables battery information to be transmitted. I learned that this module has support for AT command and control, the module also has bluetooth SIG and MLDP(Microchip low energy data profile). This is the main reason why using the module will be simpler than using a regular MCU. The RN4020 only requires us to send commands over UART and it will function accordingly.</p>
+
+<p>
+My tasks for next week include doing a simple project with the Bluetooth module to further my understanding. I will also be doing some pin slection to aid the PCB design process.</p>
+<br> <br>
+
+		<h2>Week 5:</h2>Date: 2/14/2020</p>
+	    <p>Total Hours: 10</p>
+		<h3>Description of design efforts:</h3>
+<p>This week I am focusing on getting a basic bluetooth interface setup between the MCU and the bluetooth module (I hope to get this done by 2/16/20). We as a team are going to be working on deciding the sound effects for our effects box (we plan to get this done by the end of the weekend as well). An android application is being developed in parallel and we plan use this to test the interface between the module and the MCU.</p> <br><br>
+<img src="img/athagart/image.png" alt="" width="627" height="315" class="center"/> <br><br>
+	<p> I was able to get some information on the different types of connection between the MCU and the bluetooth module (I decided to use the connections for a basic interface)(<a href="https://microchipdeveloper.com/ble:rn4020-mcu-interface">Link</a>). I was able to turn on(WAKE up) the bluetooth module and next I plan to establish a connection with my android phone. I have installed a BLE scanner application and plan to use this to connect to the bluetooth module. Next I will have to figure out what the UART commands mean and figure out a way to display a message when bluetooth connection is established. I have to figure out how the software wake up feature works with the module. I also installed kiCad on my laptop because I plan to work with Aditya Biala in the PCB design process. I will continue to learn more about good pcb design practices.</p>
+
+	<br> <br>
+
+		<h2>Week 6:</h2>Date: 2/21/2020</p>
+	    <p>Total Hours: 10-12</p>
+		<h3>Description of design efforts:</h3>
+<p>This week we were able to send UART commands through an FTDI adapter to the RN4020 to set up a bluetooth service to communicate with the bluetooth module. We did this by refereing to the RN4020 user guide that proved to be a good document in telling us what commands to use(<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/70005191B.pdf">RN4020 user guide </a>). Carson and Calvin were able to make good progress on the android application side of things and were able to send information over bluetooth from an android phone to the RN4020. 
+</p>
+<img src="img/athagart/week6a.png" alt="" width="500" height="300" class="center"/>
+<br><br>
+<img src="img/athagart/week6b.png" alt="" width="500" height="300" class="center"/>
+<p>In my own time I learnt how to use kiCAD and as that is our pcb design tool of choice. My goal by next week is to work on getting the first draft of the PCB completed in time for the midterm review. I also spent time familiarizing myself with good PCB design practices, one of the ways I did this was by going over the "Board Assembly and Soldering Techniques" lecture provided to us. I feel comfortable about getting started with kiCAD.</p>
+
+<h2>Week 7:</h2>
+Date: 2/28/2020</p>
+<p>Total Hours: 12-14</p>
+<h3>Description of design efforts:</h3>
+<p>This week I worked a bit on the PCB schematic but mostly worked on the programming the audio codec.</p>
+
+<p>
+Codec Mode Control:<br>
+The codec has 4 registers that control its operations. These registers are set by hooking up the codec with a 3 wire serial interface as shown in the figure below(MD,ML,MC). This interface consists of 16 data bits, to choose what register is written into bits 9 and 10 of this stream have to be set appropriately (00,01...11). After doing research I found out that this somewhat unconventional interface was an SPI interface and that ML means chip select.Chip select needs to be set manually using a GPIO pin because our MCU does not have a CS option. There is also another caveat to this interface. Our MCU only supports 7 or 8 bit SPI but 16 bit registers need to be set, this will mean that I will need to send 8 bits twice. I am currently coding this and in the process of figuring out how to do chip select.</p><br>
+
+<img src="img/athagart/week7b.png" alt="" width="633" height="199" class="center"/>
+
+<p>
+Codec I2S:<br>
+The MCU we chose does not have native support for I2S but this is used by our codec's digital_in and digital_out pins. The workaround is that a single 4-wire SPI interface can be used to simulate the two I2S connections required. I read through the document that showed how this can be achieved(<a href="http://www.ti.com/lit/an/slaa449a/slaa449a.pdf">Document</a>). I am still in the process of fully understanding how this process works. The image below shows how this is done (the figure shows a different codec but we will be using the pcm3002).</p>
+
+<img src="img/athagart/week7a.png" alt="" width="551" height="399" class="center"/>
+<p>
+I am currently working on getting these to work. Completion of this will help us hear the results from our DSP processing.</p> 
+
+
+<h2>Week 8:</h2>
+Date: 3/6/2020</p>
+<p>Total Hours: 12</p>
+<h3>Description of design efforts:</h3>
+
+This week I worked on getting the 3 wire spi connection setup. I was successful in getting the timing diagram necessary for the codecs operation. Because our MCU does not support 16 bit spi necessary for setting the registers I worked on a workaround to this problem. The way I addressed this issue was by setting the clock polarity low between the two 8 bit datas being sent (data being sent only when the clock is active). This will trick the codec into thinking this is actually a 16 bit spi interface. Next step would be to test this implementation on sound data to see if this is actually working. The timing diagram is shown below.<br><br>
+
+<img src="img/athagart/week8.png" alt="" width="551" height="399" class="center"/><br>
+<br>
+I also spent time preparing for the design review and making some of the slides for the presentation. I have also started programming the I2S(spi in reality) interface.
+
+
+<h2>Week 11(week after spring break):</h2>
+Date: 3/27/2020</p>
+<p>Total Hours: N/A</p>
+<h3>Description of design efforts:</h3>
+<p>Moving forward I will work towards getting the codec to work. I have already written the code for the mode control it is yet to be tested. We as a team have decided to use discord for working together online (as it has convenient screen sharing feature). We will continue to use a Github repo to share out code. We also have a whatsapp message group for immediate communication needs. </p>
+
+
+
+<h2>Week 12:</h2>
+Date: 4/3/2020</p>
+<p>Total Hours: 10</p>
+<h3>Description of design efforts:</h3>
+<p>This week I finished working on a program that will mute the codec?s output and learn about other functionalities of the codec that we may require in the future. I am working with Aditya B on the codec and I plan to test this program as soon as the hardware side of the codec is set up. The image below shows the screenshot of the program I have been working on.  </p><br>
+
+<img src="img/athagart/week12.png" alt="" width="640" height="350" class="center"/>
+<br>
+<p>The codec is controlled via a 3 wire spi from the MCU. The 16 bit long spi message contains the register we are going to be writing into. These registers control how the codec functions. For Instance we can control the attenuation, this is how I'm currently muting the codecs outputs. The program I worked on sets the attenuation field in R0 and R1 registers (separate registers for left and right channels). This program's main purpose is to make sure the codec mode control is working. We plan to write different values to the register according to our needs. 
+</p>
+
+
+<h2>Week 13:</h2>
+Date: 4/10/2020</p>
+<p>Total Hours: 10</p>
+
+<p>This week I worked a little bit with Aditya B to make progress on the hardware side of the codec, but I mainly worked on figuring out how to interface with the codec to send recive data over 12s over a 4 wire spi. The screen shot of my workspace can be seen below.Converting the 4 wire spi to 2 i2s lines will require few aditional hardware components and we are also working on that as well.</p><br>
+
+<img src="img/athagart/week13.png" alt="" width="640" height="350" class="center"/>
+
+<p>I have also started to think about how to put together all the software components because I think it is a good time to do so.</p><br>
+
+
+
+<h2>Week 14:</h2>
+Date: 4/17/2020</p>
+<p>Total Hours: 10</p>
+
+<p>We plan to use an external oscillator to source the codec?s sysclock. I did research on what needs to be done on the software level. I learned that we need to set the HFXT oscillator (high frequency external oscillator) as input to our subsystem clocks such as the SMCLK. The image below gives us a better idea (from the user guide)and gives more detail on what needs to be done.
+</p><br>
+
+<img src="img/athagart/week14a.jpg" alt="" width="770" height="266" class="center"/>
+
+<p>I also started integrating the code for our bluetooth module, codec and the pmic. We expect some changes to be made to this code but the basic structure of our program is planned. 
+I also tried setting the correct clock speed for out spi/i2s output of (32*48000 sampling rate =1.536 Mhz) but I was not successful on Friday. I will try again on Saturday/Sunday. This is required for sending and receiving audio data to the codec.
+</p><br>
+
+<h2>Week 15:</h2>
+Date: 4/25/2020</p>
+<p>Total Hours: 30</p>
+
+<p> This week Aditya B and I worked extensively on getting the I2S to work with the help of SPI and DMA(because our mcu doesn't have native support for i2s, this is a workaround). We made some good progress this week and are now able to get a continuous clock signal for the bit clock. This is required to be continuos because the left-right clk is using this as an input. Here is a timing diagram below that shows the oscilloscope. The bit clock is set to ~1.5 MHz. This will yield us a sampling rate of around ~44000 which is what we decided on using. We were able to send the data correctly, the diagram below is sending 0x0011 just for testing purposes(16bits). The final version of the code will have 2 buffer arrays that will bring data to and from the codec. 
+
+</p><br>
+<img src="img/athagart/week15.jpg" alt="" width="700" height="460" class="center"/>
+
+<p>There is still an issue that we need to work on and that is to sync the clock and the data, the bit clock seems to lag behind by 2 cycles, We plan to get this done by the weekend. We also spent time filling out the abet senior design report. Our last resort option is to use another codec dev board we purchased as a master(this will take care of all the timing issues). 
+
+</p><br>
+
+
+	    </div>
+    	</div>
+
+
+
+    	<div id="footer">
+    	<p>© Copyright 2012 yourname.com. All Rights Reserved. <br />
+        <span class="darkgrey">Design by <a href="http://www.prontomoda.de/" target="_blank" title="Handtaschen">Handtaschen</a></span></p>
+    </div>
+</div>
+<div style="margin: 1em 0 3em 0; text-align: center;">
+</div>
+</body>
+</html>

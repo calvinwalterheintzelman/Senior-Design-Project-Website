@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<base href="https://engineering.purdue.edu/477grp8/" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="bred<" />
+	<meta name="keywords" content="bred<" />
+	<meta name="description" content="bred<" />
+	<meta name="robots" content="all" />
+	<title>AudioBeamer Team : Aditya Biala</title>
+
+	<style type="text/css" title="currentStyle" media="screen">
+		@import "./css/global.css";
+	</style>
+    
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="top">
+    	<h1 class="logo">AudioBeamer</h1>
+        <ul id="topnavi">
+        	<li><a href="https://engineering.purdue.edu/477grp8/">HOME</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Files/documents.html">DOCUMENTS</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Files/references.html">REFERENCES</a></li>
+        	<li><a href="https://engineering.purdue.edu/477grp8/Media/media.html">MEDIA</a></li>
+        	<li class="active"><a href="https://engineering.purdue.edu/477grp8/Team/team.html">TEAM</a></li>
+        </ul>
+    </div>
+    <div id="header">
+    	<img src="img/header.jpg" alt="" width="1000" height="183" />
+    </div>
+    <div id="main">
+    	<div id="left-part">
+        	<h1>Team Members</h1>
+            <ul id="subnavi">
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/ctabachk.html">Carson Tabachka</a></li>
+                <li class="active"><a href="https://engineering.purdue.edu/477grp8/Team/abiala.html">Aditya Biala</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/athagart.html">Aditya Thagarthi Arun</a></li>
+                <li><a href="https://engineering.purdue.edu/477grp8/Team/cheintze.html">Calvin Walter Heintzelman</a></li>
+            </ul>
+
+        </div>
+    	<div id="right-part">
+        	<h1>Progress Report for Aditya Biala</h1>
+            <p><img src="img/abiala.jpg" alt="" width="251" height="196" class="right" />
+            <h2>Week 2:</h2>Date: 1/24/2020</p>
+            <p>Total hours: 10</p>
+            <h4>Description of design efforts:</h4>
+            <p>I spent most of this week trying to pick a MCU based on our project requirments. After revising our PSSCs with the course staff, our project became heavily based on audio DSP. A lot of time was spent conducting research to decide which type of DSP should be considered, especially considering our power requirments. I read through a few papers and spoke to a few professors trying to find an optimal balance between power consumption and DSP capabilities. For the time being, I have decided to use 32 bit fixed point operations. Addionally, I spent some time on PCB design techniques on how to reduce noise and interfence, since we have antennas as well as digital ICs on the same PCB. 
+<br><br>Lastly, I spent this week looking at ways to improve our team efficiency by using project management techniques which we will implement in our team soon. This will help us in the future when the complexity of our project increases and we have to divide our project into managable modules.
+<br><br> Towards the future, Carson and I will be doing more research on DSP implementation & optimization. </p>
+	<br><br>
+
+		<h2>Week 3:</h2>Date: 1/31/2020</p>
+	    	<p>Total Hours: 10</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> <img src="img/abiala/msp.png" alt="" width="250" height="220" class="right"/>This week was focussed heavily on picking the correct components. I worked on most of the component analysis, working on choosing the appropriate peripherals for our project. It was my responsibility to choose the appropriate MCU, Audio Codec, & PMIC. <br><br>
+In terms of the MCU, we decided to go with the Texas Instruments MSP430FR5994. This suits our needs as we decided to go with 16-bit fixed point DSP for our audio operations and this MCU has a dedicated DSP (LEA) unit to handle 16 bit DSP operations in real time. We requested development boards for this MCU to begin protyping.<br> The audio codec I chose, (Texas Instruments, TLV320AIC26) supports 16-bit audio resolution  at 44.1Khz sampling rate which is appropriate for a professional audio application.
+<br><br>
+I also spent a considerable amount of time on researching PCB design & interfacing. I studied battery technology and power electronics to supply a safe amount of current to our project. Up to far, I have been considering a single Li-ion cell (3.7V,1500mAh). According to my calculations, we should be able to achieve our target of 2 hours battery life. <br>
+ 
+		</p>
+<p> <img src="img/abiala/crystal.jpg" alt="" width="171" height="166" class="right" />
+Additionally, I read up about external crystals to generate accurate clocks for both the MCU and audio codec to avoid jitter in the signal. I am still trying to understand clock timing issues between peripharals in our project. 
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	
+
+		<h2>Week 4:</h2>Date: 2/7/2020</p>
+	    	<p>Total Hours: 10</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> This week began by working on our development board. I got familiar with the MSP430 family by trying out different examples (like ECE362). In addition I installed the DSP library and started looking into how to use the internal DSP unit in the MSP430 <br><br> <img src="img/code.png" alt="" width="500" height="300" class="center"/> <br><br>
+I spent a lot of time this week on circuit design considerations. Since this is going to be a mixed signal PCB, I need to know how ensure proper grounding. Bad ground design can create ground feedback loops and noisy interference. I read a lot of tutorials on how to ensure good ground design. I am also studying the advantages of using a 2 layer PCB design to ensure a small physical package that can fit our expected design. This involved looking up vias and watching tutorial videos.
+<br><br>
+In terms of PCB design, I decided to use Kicad over Altium primarily due to complexity issues. I setup Kicad and started working on our PCB design. We, as a team have also ordered components to begin protoyping circuits. Up to so far, I successfully built & tested our power regulation (linear regulator, LDO) <img src="img/circuit2.png" alt="" width="300" height="186" class="right" />circuit which successfully supplies 3.3V at upto 300mA. I am aiming to test battery charging and power management circuits over the weekend.  <br>
+
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+		<h2>Week 5:</h2>Date: 2/14/2020</p>
+	    	<p>Total Hours: 12</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> This week I mainly worked on the power system of our project. I succesfully designed our voltage regulation and Li-ion circuit. In addition, I started working on PCB design.<br><br> <img src="img/abiala/footprint.png" alt="" width="200" height="300" class="right"/> <br>
+In terms of power system design, I designed the circuit such that when external USB power is connected, the current charges the Li-ion cell as well as provides current to the system load. I prototyed the charging circuit and worked on selecting battery protection MOSFET. I found that a PMOS, Vgs threshold of 2V works the best in protecting the battery, while working as a switch. I came up with an issue of charging the battery. I am not able to draw sufficient current to charge the battery. I suspect this to be an issue with pin assertations on the chip.
+<br><br>
+In terms of PCB design, I worked out the dimensions and layout of the PCB. I read mixed-signal design textbook chapters as an inspiration for the design. I have decided to go with the 2 layer PCB and already have a rough idea of component layout. I completed the 1st version of our PCB and have added our current power system design to the PCB.In addition, I am currently designing the ground plane and am working on ground plane cutouts for reduced ground noise.   <img src="img/abiala/PCB.png" alt="" width="280" height="296" class="left" /> <br>
+
+		</p>
+		<h2>Week 7:</h2>Date: 2/28/2020</p>
+	    	<p>Total Hours: 8</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> This week I spent most of my time working on the audio system of the project. This involves understanding our audio codec and reading the documenation extensively. I attempted to get the codec working and receive an output on the I2S data lines of the ADC. One major issure I am having is getting a reliable high frequency clock signal. I require a 1 Mhz system clock for the codec's internal DAC and ADC to maintain an audio sampling rate of 44.1Khz and the Digilent AD discovery makes an unusable clock output at even 5Mhz. I will probably have to use an external crystal during protyping.<br><br> <img src="img/abiala/codec.jpg" alt="" width="500" height="300" class="center"/> <br>
+In terms of overall audio system design, I have started prototyping the preamplification ciruit . In addition my teammates and I started looking at the math required for real time audio DSP implementation. The use of the correct digital filters will make for a better audio experience. I also assisted in the firmware of our project helping implement UART communication with the RN4020 and used the RS 232 converter we used in ECE362 to view the results on the terminal to ensure correct operation. 
+<br><br>
+In terms of PCB design, I expect to finalize the PCB design by the weekend. I am just working on layout and ground improvements and adding through holes for prototyping pins. I finalized the PMIC design at the start of the week and only have to add the audio codec schematic. I am waiting to recieve positive results on prototyping the audio codec before I can finalize PCB design. <br>
+
+		</p>
+
+		<h2>Week 8:</h2>Date: 3/06/2020</p>
+	    	<p>Total Hours: 30</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> This week, almost all of my time was spent on PCB design. I designed the second draft of our PCB, adding separate ground planes. I used TA advice to add an analog ground and an analog Vcc alongside with a ground Vcc & ground. This is mainly done to avoid noise on a mixed signal PCB. This is accomplished by using ferrite beads and capacitors in parallel with the regulated voltage out. I finalized the complete circuit for our system excluding pre-amplification according to our team's prototyping results.<br><br> <img src="img/abiala/layout.png" alt="" width="350" height="450" class="center"/> <br>
+In terms of audio system design, I have achieved mixed results from our audio codec. According to the data sheet, clock synchronization between audio data and system clock is vital to avoid jitter in the codec. I was able to simulate synced clocks by using 1 input from the function genarator triggered by 2 clk inputs from an AD2 aswell as a simulated audio input from the wave generator from the oscilloscope. I was able to recieve I2S data at 48kHz sampling rate from data out of the audio codec. However, I am unsure if the data is meaningful because I am still reading I2S data when there is no input applied to the codec. This may be due to poor grounding but this is yet to be tested.
+<br>
+I have to add a preamplification circuit to connecting the guitar to the codec. Considering our battery situation, Class A & class B amplifiers seem unviable. I am still attempting to test a circuit that provides a suitable input to our codec. <br>
+<img src="img/abiala/pcb1.png" alt="" width="480" height="450" class="center"/>
+</p>
+
+
+		<h2>Week 11:</h2>Date: 3/27/2020</p>
+	    	<p>Total Hours: 20</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> 
+Most of the time over the spring break was spent trying to setup a home lab so that I can work on hardware design from home. The coronavirus situation has set our team progress quite a bit due to social isolation. I worked with Carson to set up a way our team can communicate for the rest of the semester. Additionally, it was decided that I would construct/design relevant hardware modules for each team member pertaining to their respective task. This ensures each team member has an individual dev board as well as a soldered protoboard containing relevant ICs for testing. <img src="img/abiala/2.jpg" alt="" width="460" height="350" class="center"/> <br>
+In terms of hardware design, we have been able to verify and complete all hardware design except the audio codec. I also succesfully designed & tested preamplfication circuit to ensure proper audio biasing and amplification. I am having a hard time getting the audio codec to work due to clock issues. I am recieving bits sampled from the ADC but am unable to verify the output. I am solving this issue by building a more durable soldered protoboard with appropriate bypass capactitors to ensure there is any inaccuracy due to the breadboard. I am expecting to make positive progress as I have a better plan to work with my teammates to solve this issue.
+<br>
+
+<img src="img/abiala/1.jpg" alt="" width="380" height="450" class="center"/>
+</p>
+
+		<h2>Week 13:</h2>Date: 4/11/2020</p>
+	    	<p>Total Hours: 12</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> 
+I believe that I have gotten the audio codec to send meaningful data. This was achieved through system clock synchronization. This was a major challenge & I did this by using 2 Analog Discovery boards to simulate 4 waveforms and using the manual trigger to synchronize both AD2 boards. The next step is to use the DCO out pin on the MSP430 to source the system clock of the codec. This should allow the system clock and data between the MCU & codec to be in sync ensuring a robust design.   <img src="img/abiala/circuit.jpg" alt="" width="380" height="470" class="center"/> <br>
+I am planning to work with Aditya TA & Carson to combine the I2S and DSP code in bypass mode. This means following the strict audio pipeline as follows: <br> Recieving I2S from the codec, transferring the buffer to the DSP and bypass all filters and send this unchanged buffer back to the codec. <br> This ensures that the hardware is final and audio hardware works as expected before digital filters are applied. 
+<br>
+
+		<h2>Week 14:</h2>Date: 4/17/2020</p>
+	    	<p>Total Hours: 12</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> 
+In terms of audio system design, I am working with Aditya TA to get the audio codec to communicate with the MSP430 MCU using left-justified I2S. There is some hardware required to make this work: namely a 5 bit counter to simulate the left-right clock of the I2S data. There is official Texas Instrument Documentation on how to achieve this in terms of software & hardware. I also worked with Carson remotely to help get the DSP working. This was a unique challenge because we had to work on hardware modification remotely for verification. The main task completed was working IIR filters which should set the foundation for equalization and effects.   <img src="img/abiala/dsp.png" alt="" width="580" height="410" class="center"/> <br>
+Lastly, I have started to put together the circuit on a breadboard since I could not complete PCB verification due to large delays in getting hardware verified(lack of equipment and working remotely with teammates). I have a complete PCB designed with hopes of ordering it but I think it is too late to order it now. 
+<br>
+Lastly, as a last case backup option, I ordered a audio codec development board in case we cannot get the PCM3002 to work.
+<br>
+<img src="img/abiala/new_codec.jpg" alt="" width="380" height="470" class="center"/>
+</p>
+
+
+		<h2>Week 15:</h2>Date: 4/17/2020</p>
+	    	<p>Total Hours: 30</p>
+		<h3>Description of design efforts:</h3>
+
+
+<p> 
+This week I was able to finalize our hardware design. Our entire circuit for the project is designed and working. Additionally, I have started building our submodules on breadboard and am integrating the final circuit. I have a complete PCB design built using the same circuits but unfortunately could not complete hardware verification in time to build one.   <br>
+Lastly, I am helping implement SPI to I2S convertion. One major issue is that the MSP430FR5994 is limited to 8 bit SPI, so Aditya TA and I are using DMA to find a workaround. We are able to send achieve a continuous bit stream as required by I2S with 16 bits in information but the data is losing sync with the clock. Is we ignore the clock sync, we noticed that the data being sent is correct, but just keeps losing sync. This implies that we are using some extra clock cycles somewhere which is causing synchronization issues. We are hoping to solve this issue very soon.  <br>
+<img src="img/abiala/i2s_working.PNG" alt="" width="280" height="410" class="center"/>
+<br>
+As a worst case option, we have kept the option of using the backup audio codec development in master mode to have the codec generate all the clocks and use the MCU in SPI slave mode. This is a last resort option. 
+<br>
+
+</p>
+        </div>
+    </div>
+    <div id="footer">
+    	<p>© Copyright 2012 yourname.com. All Rights Reserved. <br />
+        <span class="darkgrey">Design by <a href="http://www.prontomoda.de/" target="_blank" title="Handtaschen">Handtaschen</a></span></p>
+    </div>
+</div>
+<div style="margin: 1em 0 3em 0; text-align: center;">
+</div>
+</body>
+</html>
